@@ -1,3 +1,5 @@
 module.exports.profile = function(req,res){
-    return res.end("<h1>this is the user controller</h1>");
+    return res.render('profile',{
+        title: 'profile page'
+    });
 }
