@@ -5,6 +5,6 @@ const controller = require("../controller/home_controller");
 
 router.get('/', controller.home);
 router.use('/users', require('./users'));
+router.use('/post', require('./post'));
 
-console.log("Router has been started");
 module.exports = router;

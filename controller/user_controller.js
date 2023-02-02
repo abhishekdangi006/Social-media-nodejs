@@ -7,12 +7,6 @@ module.exports.profile = function(req,res){
     });
 }
 
-//render the post page
-module.exports.post = function(req,res){
-    return res.render('post',{
-        title: 'Post page'
-    });
-}
 
 //render the signup page
 module.exports.signup = function(req,res){
