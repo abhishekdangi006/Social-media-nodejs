@@ -1,8 +1,15 @@
+<link rel="stylesheet" href="/css/header.css">
 <header>
+
+    <div><h1>Codial</h1></div>
     <ul>
-        <li>home</li>
-        <li>about</li>
-        <li>contact</li>
-        <li>Support</li>
+        <% if(locals.user){%>
+        <li><a href="/users/profile"><%=user.name%></a></li>
+        <li><a href="/users/signout">Sign-Out</a></li>
+        <% }else{%>
+            <li><a href="/users/signin">Sign-In</a></li>
+            <li><a href="/users/signup">Sign-Up</a></li>
+            <%}%>
     </ul>
+
 </header>
