@@ -1,8 +1,8 @@
 header{
     margin: 0;
     padding: 0;
-    background-color: black;
-    color: white;
+    background-color: #D0DAEE;
+    color: black;
     height: 5vh;
 
     div{
@@ -14,24 +14,26 @@ header{
     
     ul{
         margin: 0;
+        
         padding: 0;
         list-style-type: none;
         display: inline;
         float: right;
 
         li{
-            // margin: 0 2vw;
-            padding: 15px;
+            
+            padding: 20px;
             font-weight: 5000;
             font-size: 1.5rem;
             display: inline;
             
             
             a{
-                color: white;
+                color: black;
                 text-decoration: none;
             }
             a:hover{
+                color: #008080;
                 text-decoration: underline;
             }
         }

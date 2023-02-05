@@ -1,36 +1,35 @@
 <link rel="stylesheet" href="/css/home.css">
-<h1>Codial home view</h1>
 
+<div id="home-container">
+    <section id="message">
 
-<section id="feed-posts">
-    <h4>Posts</h4>
-    <% if(locals.user){ %>
-    <form action="/post/create" id="new-post-form" method="POST">
-        <textarea name="content" cols="30" rows="3" placeholder="Type here ..."></textarea>
-        <input type="submit" value="Post">
-    </form>
-    <% } %>
+    </section>
+    <section id="feed-posts">
+        <% if(locals.user){ %>
+            <div id="new-post-form">
+                <h1>Post Your Thought</h1>
+        <form action="/post/create"  method="POST">
+            <textarea name="content" cols="30" rows="3" placeholder="Type here ..." required></textarea>
+            <button type="submit">Post</button>
+        </form></div>
+        <% } %>
 
-    <div id="post-list-container">
-        <ul>
-            <% for(post of posts){%>
-                <li>
-                    <p>
-                        <%=post.content %><br>
-                        <small><%=post.user.name %></small>
-                    </p>
-                    <div class="post-comments">
-                        <% if(locals.user){ %>
-                    <form action="/comment/create" method="POST">
-                        <input type="text" name="content" placeholder="comment here...">
-                        <input type="hidden" name="post" value="<%=post._id%>">
-                        <input type="submit" value="Comment">
-                    </form>
-                    <% } %>
-                </div>
-                </li>
-                <%}%>
-        </ul>
-    </div>
-    
-</section>
+        <div id="post-list-container">
+            <h1>Posts <i class="fas fa-angle-down"></i></h1>
+            <ul>
+                <% for(post of posts){%>
+                    <%- include('_post'); -%>
+                    <%}%>
+            </ul>
+        </div>
+        
+    </section>
+    <section id="user-friends">
+        <h1>Friends <i class="fas fa-angle-down"></i></h1>
+        <%for(u of all_users){%>
+            <p>
+                <a href="/users/profile/<%=u.id%>"><i class="fas fa-user-circle"></i> <%=u.name%></a>
+            </p>
+            <%}%>
+    </section> 
+</div>

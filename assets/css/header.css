@@ -1,8 +1,8 @@
 header {
   margin: 0;
   padding: 0;
-  background-color: black;
-  color: white;
+  background-color: #1096ef;
+  color: black;
   height: 5vh; }
   header div {
     display: flex;
@@ -11,19 +11,21 @@ header {
     display: inline; }
   header ul {
     margin: 0;
+    margin-top: 5px;
     padding: 0;
     list-style-type: none;
     display: inline;
     float: right; }
     header ul li {
-      padding: 15px;
+      padding: 20px;
       font-weight: 5000;
       font-size: 1.5rem;
       display: inline; }
       header ul li a {
-        color: white;
+        color: black;
         text-decoration: none; }
       header ul li a:hover {
+        color: #008080;
         text-decoration: underline; }
   header h1 {
     color: blue;

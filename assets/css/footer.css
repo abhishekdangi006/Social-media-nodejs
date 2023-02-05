@@ -1,7 +1,9 @@
-footer {
+#footer-container {
   text-align: center;
-  margin: 0;
-  padding: 0;
-  background-color: black;
-  color: white;
+  background-color: #5511f3;
   height: 5vh; }
+  #footer-container p {
+    color: black;
+    margin-top: 5px; }
+    #footer-container p small {
+      color: #008080; }

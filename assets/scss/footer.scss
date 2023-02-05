@@ -1,8 +1,15 @@
-footer{
+#footer-container{
     text-align: center;
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: white;
+    // margin: 76vh 0 0 0;
+    background-color: rgb(235, 235, 235);
+    
     height: 5vh;
+
+    p{
+        small{
+	            color:#008080;
+        }
+        color: black;
+        margin-top: 5px;
+    }
 }
