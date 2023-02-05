@@ -2,7 +2,7 @@
   display: flex;
   background-color: #fff; }
   #home-container #message {
-    width: 30%;
+    width: 25%;
     padding: 10px;
     border-right: 1px solid lightgray;
     height: 100 vh;
@@ -10,7 +10,7 @@
     #home-container #message h1 {
       color: #008080; }
   #home-container #feed-posts {
-    width: 40%;
+    width: 50%;
     padding: 10px; }
     #home-container #feed-posts h1 {
       color: #008080; }
@@ -49,7 +49,7 @@
       font-size: 1.1rem;
       color: red; }
   #home-container #user-friends {
-    width: 30%;
+    width: 25%;
     padding: 10px;
     border-left: 1px solid lightgray;
     height: 100 vh;
