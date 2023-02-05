@@ -48,7 +48,7 @@ module.exports.create = function(req,res){
         if(!user){
             User.create(req.body, function(err,user){
                 if(err){console.log('error in creating user while signing up'); return}
-
+                req.flash('success', 'Profile created successfully');
                 return res.redirect('/users/signin');
             });
         }else{
@@ -68,9 +68,9 @@ module.exports.destroySession = function(req,res){
     req.logout(function(err){
         if(err){
             console.log("error while logout");
-        }
+        }   
     });
-    req.flash('success', 'You have logged out!')
+    req.flash('success', 'You have logged out!');
     return res.redirect('/');
 } 
 
@@ -78,6 +78,7 @@ module.exports.destroySession = function(req,res){
 module.exports.update = function(req,res){
     if(req.user.id == req.params.id){
         User.findByIdAndUpdate(req.params.id, req.body, function(err, user){
+            req.flash('success', 'Profile updated successfully');
             return res.redirect('back');
         });
     }else{
