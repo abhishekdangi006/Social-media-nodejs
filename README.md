@@ -24,3 +24,6 @@ npm install cookie-parser
 
 for scss
 npm install node-sass-middleware
+
+for flash message 
+npm install connect-flash
