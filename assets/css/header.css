@@ -1,7 +1,7 @@
 header {
   margin: 0;
   padding: 0;
-  background-color: #1096ef;
+  background-color: #D0DAEE;
   color: black;
   height: 5vh; }
   header div {
@@ -28,5 +28,6 @@ header {
         color: #008080;
         text-decoration: underline; }
   header h1 {
-    color: blue;
-    display: inline; }
+    color: #008080;
+    display: inline;
+    padding: 10px; }

@@ -1,8 +1,9 @@
+<link rel="stylesheet" href="/css/post.css">
 <li class="user-post">
     <p>
-        <small>@ <%=post.user.name %></small>
+        <small class="user-name"><a href="/users/profile/<%=post.user.id%>"><i class="fas fa-user-circle"></i> <%=post.user.name%></a></small>
         <% if(locals.user && locals.user.id == post.user.id){ %>
-        <small><a href="/post/destroy/<%=post.id%>"><i class="fa-solid fa-trash"></i></a></small>
+        <small class="delete"><a href="/post/destroy/<%=post.id%>"><i class="fa-solid fa-trash"></i></a></small>
         <%}%>
         <br>
         <%=post.content %>
@@ -17,11 +18,13 @@
             </ul>
         </div>
         <% if(locals.user){ %>
+            <div id="comment-form">
     <form action="/comment/create" method="POST">
         <input type="text" name="content" placeholder="comment here..." required>
         <input type="hidden" name="post" value="<%=post._id%>">
-        <input type="submit" value="Comment">
+        <button type="submit"Comment>Comment</button>
     </form>
+</div>
     <% } %>
 </div>
 </li><br>

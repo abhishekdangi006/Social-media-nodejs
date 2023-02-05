@@ -51,6 +51,33 @@
                 color:#fff;
             }
         }
+
+        #post-list-container{
+
+            .user-name{
+                a{
+                    color:black;
+                    font-size: 1rem;
+                    text-decoration: none;
+                }
+                a:hover{
+                    font-size: 1.1rem;
+                    color:blue;
+                }
+            }
+
+            .delete{
+                a{
+                    color:black;
+                }
+                a:hover{
+                    font-size: 1.1rem;
+                    color:red;
+                }
+            }
+            
+            
+        }
            
     }
 
@@ -62,7 +89,18 @@
         background-image: linear-gradient(-23deg,rgb(16, 150, 239), rgb(85, 17, 243));
 
         h1{
-            color: #008080;
+            color: white;
+            margin-left: 1vw;
+        }
+        a{
+            margin-left: 1vw;
+            color: whitesmoke;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        a:hover{
+            color:yellow;
+            font-size: 1.1rem;
         }
     }
 }
