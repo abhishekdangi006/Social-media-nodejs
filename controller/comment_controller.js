@@ -12,10 +12,12 @@ module.exports.create = async function(req,res){
             });
                 post.comments.push(comment);
                 post.save();
+                req.flash('success', 'commented successfully!');
                 res.redirect('back');
         }
     }catch(err){
-        console.log("Error in comment controller create method ", err);
+        req.flash('error', err);
+        return res.redirect('back');
     }
 }
 
@@ -28,11 +30,13 @@ module.exports.destroy = async function(req,res){
             comment.remove();
 
         let post = await Post.findByIdAndUpdate(postId, {$pull: {comments: req.params.id}});
-                return res.redirect('back');
+            req.flash('success', 'Comment deleted success.');
+            return res.redirect('back');
         }else{
             return res.redirect('back');
         }
     }catch(err){
-        console.log("Error in comment controller destroy method ", err);
+        req.flash('error', err);
+        res.redirect('back');
     }
 }
