@@ -14,16 +14,16 @@
     padding: 10px; }
     #home-container #feed-posts h1 {
       color: #008080; }
-    #home-container #feed-posts #new-post-form {
+    #home-container #feed-posts #new-post-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       background-color: white;
       border-bottom: 1px solid lightgrey;
       width: 100%; }
-      #home-container #feed-posts #new-post-form textarea {
+      #home-container #feed-posts #new-post-container textarea {
         margin: 1% 11% 0; }
-      #home-container #feed-posts #new-post-form button {
+      #home-container #feed-posts #new-post-container button {
         transition: all .5s ease;
         width: 50%;
         font-size: larger;
@@ -33,7 +33,7 @@
         background-color: #fff;
         border: 1px solid #008080;
         margin: 0.5em 23% 1em; }
-      #home-container #feed-posts #new-post-form button:hover, #home-container #feed-posts #new-post-form button:focus {
+      #home-container #feed-posts #new-post-container button:hover, #home-container #feed-posts #new-post-container button:focus {
         background-color: #008080;
         color: #fff; }
     #home-container #feed-posts #post-list-container .user-name a {

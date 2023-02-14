@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="/css/post.css">
-<li class="user-post">
+<li id="post-<%=post._id%>" class="user-post">
     <p>
         <small class="user-name"><a href="/users/profile/<%=post.user.id%>"><i class="fas fa-user-circle"></i> <%=post.user.name%></a></small>
         <% if(locals.user && locals.user.id == post.user.id){ %>
-        <small class="delete"><a href="/post/destroy/<%=post.id%>"><i class="fa-solid fa-trash"></i></a></small>
+        <small class="delete"><a class="delete-post-button" href="/post/destroy/<%=post.id%>"><i class="fa-solid fa-trash"></i></a></small>
         <%}%>
         <br>
         <%=post.content %>
@@ -27,4 +27,4 @@
 </div>
     <% } %>
 </div>
-</li><br>
+</li>
