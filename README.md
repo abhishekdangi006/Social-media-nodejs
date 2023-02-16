@@ -30,3 +30,4 @@ npm install connect-flash
 
 for social authentication
 npm install passport-google-oauth
+npm install crypto
