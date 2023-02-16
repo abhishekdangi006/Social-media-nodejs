@@ -27,3 +27,6 @@ npm install node-sass-middleware
 
 for flash message 
 npm install connect-flash
+
+for social authentication
+npm install passport-google-oauth
