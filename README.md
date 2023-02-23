@@ -34,3 +34,7 @@ npm install crypto
 
 To send mail
 npm install nodemailer
+
+for messages 
+npm install socket.io
+
